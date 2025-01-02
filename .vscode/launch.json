@@ -5,29 +5,36 @@
             "name": "CH01 - HelloCS",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "Ch01 - build",
             "program": "${workspaceFolder}/src/Ch01/HelloCS/bin/Debug/net8.0/HelloCS.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "integratedTerminal"
         },
         {
             "name": "CH01 - HelloEnvironment",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "Ch01 - build",
             "program": "${workspaceFolder}/src/Ch01/HelloEnvironment/bin/Debug/net8.0/HelloEnvironment.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
-            "name": ".NET Core Attach",
+            "name": "CH01 - CH01",
             "type": "coreclr",
-            "request": "attach"
+            "request": "launch",
+            "preLaunchTask": "Ch01 - build",
+            "program": "${workspaceFolder}/src/Ch01/CH01/bin/Debug/net8.0/CH01.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "integratedTerminal",
+            "stopAtEntry": false
         }
     ]
 }
