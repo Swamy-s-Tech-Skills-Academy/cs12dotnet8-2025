@@ -5,6 +5,7 @@ I am learning `C# 12 .NET 8` from Mark J. Price book `C# 12 .NET 8` Course. This
 ## Reference(s)
 
 > 1. <https://subscription.packtpub.com/book/web-development/9781837635870/pref>
+> 1. <https://github.com/markjprice/cs12dotnet8>
 
 ## Few Commands
 
