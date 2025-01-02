@@ -6,8 +6,14 @@ I am learning `C# 12 .NET 8` from Mark J. Price book `C# 12 .NET 8` Course. This
 
 > 1. <https://subscription.packtpub.com/book/web-development/9781837635870/pref>
 
-## Commands
+## Few Commands
 
 ```powershell
 dotnet --version
+```
+
+## Chapter 02 Commands
+
+```powershell
+dotnet new sln
 ```
