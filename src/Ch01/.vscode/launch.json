@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".HelloCS - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/HelloCS/bin/Debug/net8.0/HelloCS.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HelloCS",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "HelloEnvironment - Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/HelloEnvironment/bin/Debug/net8.0/HelloEnvironment.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HelloEnvironment",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
