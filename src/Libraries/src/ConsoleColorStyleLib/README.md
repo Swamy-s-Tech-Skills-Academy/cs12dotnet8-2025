@@ -1,3 +1,0 @@
-# ConsoleColorStyleLib
-
-To be done

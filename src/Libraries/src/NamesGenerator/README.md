@@ -1,3 +1,0 @@
-# NamesGenerator
-
-To be done

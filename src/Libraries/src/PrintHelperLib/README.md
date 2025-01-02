@@ -1,3 +1,0 @@
-# PrintHelperLib
-
-To be done
