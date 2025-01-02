@@ -5,3 +5,9 @@ I am learning `C# 12 .NET 8` from Mark J. Price book `C# 12 .NET 8` Course. This
 ## Reference(s)
 
 > 1. <https://subscription.packtpub.com/book/web-development/9781837635870/pref>
+
+## Commands
+
+```powershell
+dotnet --version
+```
