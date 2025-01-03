@@ -1,12 +1,18 @@
-﻿using System.Reflection; // To use Assembly, TypeName, and so on.
+﻿using System.Data;
+using System.Reflection;
+
+ForegroundColor = ConsoleColor.DarkCyan;
 
 // See https://aka.ms/new-console-template for more information
 // #error version
 // WriteLine($"Computer named {Env.MachineName} says \"No.\"");
 
 // Declare some unused variables using types in additional assemblies to make them load too.
-System.Data.DataSet ds = new();
+DataSet ds = new();
+WriteLine($"DataSet Name: {ds.DataSetName}");
+
 HttpClient client = new();
+WriteLine($"Default Request Version: {client.DefaultRequestVersion}\n");
 
 // Get the assembly that is the entry point for this app.
 Assembly? myApp = Assembly.GetEntryAssembly();
@@ -33,3 +39,8 @@ foreach (AssemblyName name in myApp.GetReferencedAssemblies())
     // Output the count of types and their methods.
     WriteLine("{0:N0} types with {1:N0} methods in {2} assembly.", a.DefinedTypes.Count(), methodCount, name.Name);
 }
+
+ResetColor();
+
+WriteLine("Press any key ...");
+ReadKey();
