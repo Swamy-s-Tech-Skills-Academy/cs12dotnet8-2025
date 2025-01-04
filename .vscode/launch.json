@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Ch01 - build",
-            "program": "${workspaceFolder}/src/Ch01/HelloCS/bin/Debug/net8.0/HelloCS.dll",
+            "program": "${workspaceFolder}/src/Ch01/HelloCS/bin/Debug/net9.0/HelloCS.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -17,7 +17,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Ch01 - build",
-            "program": "${workspaceFolder}/src/Ch01/HelloEnvironment/bin/Debug/net8.0/HelloEnvironment.dll",
+            "program": "${workspaceFolder}/src/Ch01/HelloEnvironment/bin/Debug/net9.0/HelloEnvironment.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
@@ -29,8 +29,24 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "Ch01 - build",
-            "program": "${workspaceFolder}/src/Ch01/CH01/bin/Debug/net8.0/CH01.dll",
+            "program": "${workspaceFolder}/src/Ch01/CH01/bin/Debug/net9.0/CH01.dll",
             "args": [],
+            "cwd": "${workspaceFolder}",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Ch02 - Arguments",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Ch02 - build",
+            "program": "${workspaceFolder}/src/Ch02/Arguments/bin/Debug/net9.0/Arguments.dll",
+            "args": [
+                "darkblue",
+                "Yellow",
+                "50"
+            ],
             "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "integratedTerminal",
