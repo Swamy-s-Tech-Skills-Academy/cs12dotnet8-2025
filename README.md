@@ -5,3 +5,37 @@ I am learning `C# 12 .NET 8` from Mark J. Price book `C# 12 .NET 8` Course. This
 ## Reference(s)
 
 > 1. <https://subscription.packtpub.com/book/web-development/9781837635870/pref>
+> 1. <https://github.com/markjprice/cs12dotnet8>
+
+## Few Commands
+
+```powershell
+dotnet --version
+```
+
+## Chapter 01 Commands
+
+```powershell
+dotnet new sln
+
+dotnet new console -o HelloCS
+dotnet sln add .\HelloCS\HelloCS.csproj
+
+dotnet new console -o HelloEnvironment
+dotnet sln add .\HelloEnvironment\HelloEnvironment.csproj
+
+dotnet new console -o Ch01
+dotnet sln add .\Ch01\Ch01.csproj
+```
+
+## Chapter 02 Commands
+
+```powershell
+dotnet new sln
+
+dotnet new console -o Arguments
+dotnet sln add .\Arguments\Arguments.csproj
+
+dotnet new console -o Vocabulary
+dotnet sln add .\Vocabulary\Vocabulary.csproj
+```
