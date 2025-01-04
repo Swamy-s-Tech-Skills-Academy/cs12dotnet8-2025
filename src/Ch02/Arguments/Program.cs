@@ -7,7 +7,7 @@ if (args.Length != 3)
     WriteLine("\nUsage: dotnet run <foreground_color> <background_color> <cursor_size>");
     WriteLine("Example: dotnet run Red Yellow 50");
     WriteLine("Available colors: Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, Magenta, Yellow, White");
-    
+
     ResetColor();
 
     return;
