@@ -17,6 +17,9 @@ WriteLine($"Namespace: {typeof(Program).Namespace ?? "None!"}");
 
 ResetColor();
 
+WriteLine("\n\nPress any key to exit...");
+ReadKey(true);
+
 throw new Exception();
 // Revealing the hidden code - Program.<Main>$(String[] args). Execute the program without debugging. 
 
