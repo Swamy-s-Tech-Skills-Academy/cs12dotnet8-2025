@@ -27,3 +27,6 @@ using (var client = new HttpClient())
 }
 
 ResetColor();
+
+WriteLine("\n\nPress any key to exit...");
+ReadKey(true);
