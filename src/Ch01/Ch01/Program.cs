@@ -15,5 +15,5 @@ IRunnableManager? runnableManager = host.Services.GetRequiredService<IRunnableMa
 
 runnableManager.RunAllRunnables("Ch01.Runnables");
 
-WriteLine("\n\nPress any key to exit..."); 
-ReadKey(true); 
+WriteLine("\n\nPress any key to exit...");
+ReadKey(true);
