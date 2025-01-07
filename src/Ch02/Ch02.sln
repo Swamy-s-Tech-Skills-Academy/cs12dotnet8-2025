@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncConsole", "AsyncConsol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch02Ex03Numbers", "Ch02Ex03Numbers\Ch02Ex03Numbers.csproj", "{7067DE12-941F-4AAC-9BA2-1A7011533914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Formatting.csproj", "{7C114674-19BA-4DEC-8FA8-7265E7FEEB0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{7067DE12-941F-4AAC-9BA2-1A7011533914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7067DE12-941F-4AAC-9BA2-1A7011533914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7067DE12-941F-4AAC-9BA2-1A7011533914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C114674-19BA-4DEC-8FA8-7265E7FEEB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C114674-19BA-4DEC-8FA8-7265E7FEEB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C114674-19BA-4DEC-8FA8-7265E7FEEB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C114674-19BA-4DEC-8FA8-7265E7FEEB0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
