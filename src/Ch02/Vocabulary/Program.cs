@@ -39,5 +39,5 @@ foreach (AssemblyName name in assembly.GetReferencedAssemblies())
 
 ResetColor();
 
-WriteLine("Press any key ...");
-ReadKey();
+WriteLine("\n\nPress any key to exit...");
+ReadKey(true);

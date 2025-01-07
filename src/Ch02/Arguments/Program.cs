@@ -58,3 +58,6 @@ WriteLine($"Background Color: {BackgroundColor}");
 WriteLine($"Cursor Size: {CursorSize}");
 
 ResetColor();
+
+WriteLine("\n\nPress any key to exit...");
+ReadKey(true);
