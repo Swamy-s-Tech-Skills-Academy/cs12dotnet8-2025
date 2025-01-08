@@ -42,6 +42,9 @@ dotnet sln add .\AsyncConsole\AsyncConsole.csproj
 dotnet new console -o Ch02Ex03Numbers
 dotnet sln add .\Ch02Ex03Numbers\Ch02Ex03Numbers.csproj
 
+dotnet new console -o Formatting
+dotnet sln add .\Formatting\Formatting.csproj
+
 dotnet new console -o Vocabulary
 dotnet sln add .\Vocabulary\Vocabulary.csproj
 ```
