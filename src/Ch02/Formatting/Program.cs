@@ -77,6 +77,10 @@ WriteLine($"Key: {key.Key}, Char: {key.KeyChar}, Modifiers: {key.Modifiers}");
 
 #endregion
 
+OutputEncoding = System.Text.Encoding.UTF8;
+string grinningEmoji = char.ConvertFromUtf32(0x1F600);
+WriteLine(grinningEmoji);
+
 ResetColor();
 
 WriteLine("\n\nPress any key to exit...");
