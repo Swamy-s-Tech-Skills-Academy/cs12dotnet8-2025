@@ -1,110 +1,88 @@
-﻿ForegroundColor = ConsoleColor.DarkCyan;
+﻿using System.Globalization;
+
+ForegroundColor = ConsoleColor.DarkCyan;
+NumberFormatInfo nfi = CultureInfo.InvariantCulture.NumberFormat; // Use invariant culture
 
 #region Storing numbers
-// An unsigned integer is a positive whole number or 0.
+
 uint naturalNumber = 23;
-
-// An integer is a negative or positive whole number or 0.
 int integerNumber = -23;
-
-// A float is a single-precision floating point number. // F or f suffix makes the value a float literal.
 float realNumber = 2.3f;
+double anotherRealNumber = 2.3;
 
-// A double is a double-precision floating point number. // double is the default for a number value with a decimal point.
-double anotherRealNumber = 2.3; // A double literal value.
+WriteLine($"uint: {naturalNumber}, int: {integerNumber}, float: {realNumber:G}, double: {anotherRealNumber:G}"); // Use G format
 
-WriteLine($"uint: {naturalNumber}, int: {integerNumber}, float: {realNumber}, double: {anotherRealNumber}");
 #endregion
 
-#region Three variables that store the number 2 million.
+#region Three variables that store the number 2 million
 
 int decimalNotation = 2_000_000;
 int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
 int hexadecimalNotation = 0x_001E_8480;
 
+WriteLine($"Decimal: {decimalNotation:N0}, Binary: {binaryNotation:N0}, Hexadecimal: {hexadecimalNotation:N0}"); // Combined output
+WriteLine($"Decimal: {decimalNotation:X}, Binary: {binaryNotation:X}, Hexadecimal: {hexadecimalNotation:X}"); // Combined output
+
 #endregion
 
 #region Exploring whole numbers
 
-// Check the three variables have the same value.
-Console.WriteLine($"{decimalNotation == binaryNotation}");
-Console.WriteLine(
-  $"{decimalNotation == hexadecimalNotation}");
-
-// Output the variable values in decimal.
-Console.WriteLine($"{decimalNotation:N0}");
-Console.WriteLine($"{binaryNotation:N0}");
-Console.WriteLine($"{hexadecimalNotation:N0}");
-
-// Output the variable values in hexadecimal.
-Console.WriteLine($"{decimalNotation:X}");
-Console.WriteLine($"{binaryNotation:X}");
-Console.WriteLine($"{hexadecimalNotation:X}");
+WriteLine($"Decimal == Binary: {decimalNotation == binaryNotation}");
+WriteLine($"Decimal == Hexadecimal: {decimalNotation == hexadecimalNotation}");
 
 #endregion
 
 #region Output the size and value ranges of common number types
 
-Console.WriteLine($"int uses {sizeof(int)} bytes and can store numbers in the range {int.MinValue:N0} to {int.MaxValue:N0}.");
-Console.WriteLine($"double uses {sizeof(double)} bytes and can store numbers in the range {double.MinValue:N0} to {double.MaxValue:N0}.");
-Console.WriteLine($"decimal uses {sizeof(decimal)} bytes and can store numbers in the range {decimal.MinValue:N0} to {decimal.MaxValue:N0}.");
+WriteLine($"{"Type",-10} {"Bytes",6} {"Min",45} {"Max",45}");
+WriteLine(new string('-', 104)); // Consistent separator
+
+WriteLine($"{"int",-10} {sizeof(int),6} {int.MinValue.ToString("N0", nfi),45} {int.MaxValue.ToString("N0", nfi),45}");
+WriteLine($"{"double",-10} {sizeof(double),6} {double.MinValue.ToString("N0", nfi),45} {double.MaxValue.ToString("N0", nfi),45}");
+WriteLine($"{"decimal",-10} {sizeof(decimal),6} {decimal.MinValue.ToString("N0", nfi),45} {decimal.MaxValue.ToString("N0", nfi),45}");
 
 #endregion
 
 #region Comparing double and decimal types
 
-Console.WriteLine("Using doubles:");
+WriteLine("Using doubles:");
 double a = 0.1;
 double b = 0.2;
-if (a + b == 0.3)
-{
-    Console.WriteLine($"{a} + {b} equals {0.3}");
-}
-else
-{
-    Console.WriteLine($"{a} + {b} does NOT equal {0.3}");
-}
+WriteLine($"{a} + {b} {(a + b == 0.3 ? "equals" : "does NOT equal")} {0.3}"); // Ternary operator
 
-Console.WriteLine("Using decimals:");
-decimal c = 0.1M; // M suffix means a decimal literal value
+WriteLine("Using decimals:");
+decimal c = 0.1M;
 decimal d = 0.2M;
-
-if (c + d == 0.3M)
-{
-    Console.WriteLine($"{c} + {d} equals {0.3M}");
-}
-else
-{
-    Console.WriteLine($"{c} + {d} does NOT equal {0.3M}");
-}
+WriteLine($"{c} + {d} {(c + d == 0.3M ? "equals" : "does NOT equal")} {0.3M}"); // Ternary operator
 
 #endregion
 
 #region Special float and double values
 
-Console.WriteLine($"double.Epsilon: {double.Epsilon}");
-Console.WriteLine($"double.Epsilon to 324 decimal places: {double.Epsilon:N324}");
-Console.WriteLine($"double.Epsilon to 330 decimal places: {double.Epsilon:N330}");
+WriteLine($"double.Epsilon: {double.Epsilon:G}"); // Use G format
+WriteLine($"double.Epsilon (full precision): {BitConverter.DoubleToInt64Bits(double.Epsilon)}");//Show full bits
 
 const int col1 = 37;
 const int col2 = 6;
 string line = new string('-', col1 + col2 + 3);
 
-Console.WriteLine(line);
-Console.WriteLine($"{"Expression",-col1} | {"Value",col2}");
-Console.WriteLine(line);
-Console.WriteLine($"{"double.NaN",-col1} | {double.NaN,col2}");
-Console.WriteLine($"{"double.PositiveInfinity",-col1} | {double.PositiveInfinity,col2}");
-Console.WriteLine($"{"double.NegativeInfinity",-col1} | {double.NegativeInfinity,col2}");
-Console.WriteLine(line);
-Console.WriteLine($"{"0.0 / 0.0",-col1} | {0.0 / 0.0,col2}");
-Console.WriteLine($"{"3.0 / 0.0",-col1} | {3.0 / 0.0,col2}");
-Console.WriteLine($"{"-3.0 / 0.0",-col1} | {-3.0 / 0.0,col2}");
-Console.WriteLine($"{"3.0 / 0.0 == double.PositiveInfinity",-col1} | {3.0 / 0.0 == double.PositiveInfinity,col2}");
-Console.WriteLine($"{"-3.0 / 0.0 == double.NegativeInfinity",-col1} | {-3.0 / 0.0 == double.NegativeInfinity,col2}");
-Console.WriteLine($"{"0.0 / 3.0",-col1} | {0.0 / 3.0,col2}");
-Console.WriteLine($"{"0.0 / -3.0",-col1} | {0.0 / -3.0,col2}");
-Console.WriteLine(line);
+WriteLine(line);
+WriteLine($"{"Expression",-col1} | {"Value",col2}");
+WriteLine(line);
+
+// Use string interpolation and consistent formatting
+WriteLine($"{nameof(double.NaN),-col1} | {double.NaN,col2:G}");
+WriteLine($"{nameof(double.PositiveInfinity),-col1} | {double.PositiveInfinity,col2:G}");
+WriteLine($"{nameof(double.NegativeInfinity),-col1} | {double.NegativeInfinity,col2:G}");
+WriteLine(line);
+WriteLine($"{"0.0 / 0.0",-col1} | {0.0 / 0.0,col2:G}");
+WriteLine($"{"3.0 / 0.0",-col1} | {3.0 / 0.0,col2:G}");
+WriteLine($"{"-3.0 / 0.0",-col1} | {-3.0 / 0.0,col2:G}");
+WriteLine($"{"3.0 / 0.0 == double.PositiveInfinity",-col1} | {(3.0 / 0.0 == double.PositiveInfinity),col2}");
+WriteLine($"{"-3.0 / 0.0 == double.NegativeInfinity",-col1} | {(-3.0 / 0.0 == double.NegativeInfinity),col2}");
+WriteLine($"{"0.0 / 3.0",-col1} | {0.0 / 3.0,col2:G}");
+WriteLine($"{"0.0 / -3.0",-col1} | {0.0 / -3.0,col2:G}");
+WriteLine(line);
 
 #endregion
 
@@ -112,13 +90,15 @@ Console.WriteLine(line);
 
 unsafe
 {
-    Console.WriteLine($"Half uses {sizeof(Half)} bytes and can store numbers in the range {Half.MinValue:N0} to {Half.MaxValue:N0}.");
-    Console.WriteLine($"Int128 uses {sizeof(Int128)} bytes and can store numbers in the range {Int128.MinValue:N0} to {Int128.MaxValue:N0}.");
+    WriteLine($"{"Type",-10} {"Bytes",6} {"Min",45} {"Max",45}");
+    WriteLine(new string('-', 104));
+    WriteLine($"{"Half",-10} {sizeof(Half),6} {Half.MinValue.ToString("N0", nfi),45} {Half.MaxValue.ToString("N0", nfi),45}");
+    WriteLine($"{"Int128",-10} {sizeof(Int128),6} {Int128.MinValue.ToString("N0", nfi),45} {Int128.MaxValue.ToString("N0", nfi),45}");
 }
 
 #endregion
 
 ResetColor();
 
-WriteLine("\n\nPress any key to exit...");
+WriteLine("\nPress any key to exit...");
 ReadKey(true);
