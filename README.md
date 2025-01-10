@@ -48,6 +48,9 @@ dotnet sln add .\Formatting\Formatting.csproj
 dotnet new console -o Numbers
 dotnet sln add .\Numbers\Numbers.csproj
 
+dotnet new console -o Variables
+dotnet sln add .\Variables\Variables.csproj
+
 dotnet new console -o Vocabulary
 dotnet sln add .\Vocabulary\Vocabulary.csproj
 ```
